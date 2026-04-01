@@ -43,7 +43,7 @@ export default {
     });
 
     if (!res.ok) {
-      console.error(`Failed to upload attachments: ${res.status} ${res.statusText}`);
+      console.error(`Failed to upload attachments: ${res.status} ${res.statusText} ${await res.text()}`);
     }
   },
 };
